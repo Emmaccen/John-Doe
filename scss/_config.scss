@@ -1,0 +1,50 @@
+$primaryColor: #272727;
+$accentColor: #091d22;
+$ease: 0.4s all ease;
+$container: 90%;
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  transition: $ease;
+  &:hover {
+    color: $accentColor;
+  }
+}
+
+.container {
+  width: $container;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 5px 0px;
+  font-weight: 400;
+}
+@mixin flex($dir: row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: space-between;
+  align-items: center;
+}
+@function setTextColor($color) {
+  @if (lightness($color) < 40%) {
+    @return whitesmoke;
+  } @else {
+    @return #000;
+  }
+}

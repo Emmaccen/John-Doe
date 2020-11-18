@@ -1,0 +1,71 @@
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: $container;
+  @include flex();
+  padding: 1rem 0px;
+  & .nav ul {
+    display: flex;
+    & li {
+      margin-right: 15px;
+      &:hover > a {
+        color: blue;
+      }
+    }
+  }
+  & .menuIcon {
+    position: relative;
+    cursor: pointer;
+    & i {
+      position: absolute;
+      top: 0;
+      right: 10%;
+      content: "";
+      width: 25px;
+      height: 2px;
+      background-color: white;
+      transition: $ease;
+
+      &::before {
+        position: absolute;
+        top: -6px;
+        right: 10%;
+        content: "";
+        width: 25px;
+        height: 2px;
+        transition: $ease;
+        background-color: white;
+      }
+      &::after {
+        position: absolute;
+        top: 6px;
+        right: 10%;
+        content: "";
+        width: 25px;
+        height: 2px;
+        transition: $ease;
+        background-color: setTextColor($primaryColor);
+      }
+    }
+    // // hover
+    // &:hover i {
+    //   right: 10px;
+    // }
+  }
+  & .menuOpen {
+    & i {
+      transform: translateX(12px);
+      background-color: transparent;
+
+      &::before {
+        transform: rotate(-30deg) translateX(-12px);
+        width: 30px;
+      }
+      &::after {
+        transform: rotate(30deg) translateX(-12px);
+        width: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.home {
+  position: fixed;
+  top: 20%;
+  bottom: 30%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  & div {
+    width: 70%;
+  }
+
+  & .firstName {
+    font-size: 10vw;
+    border-bottom: 1px solid setTextColor($primaryColor);
+    & .lastName {
+      color: $accentColor;
+    }
+  }
+}

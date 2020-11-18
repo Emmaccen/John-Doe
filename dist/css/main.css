@@ -1,0 +1,197 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+a:hover {
+  color: #091d22;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 5px 0px;
+  font-weight: 400;
+}
+
+.home {
+  position: fixed;
+  top: 20%;
+  bottom: 30%;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.home div {
+  width: 70%;
+}
+
+.home .firstName {
+  font-size: 10vw;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.home .firstName .lastName {
+  color: #091d22;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0px;
+}
+
+header .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .nav ul li {
+  margin-right: 15px;
+}
+
+header .nav ul li:hover > a {
+  color: blue;
+}
+
+header .menuIcon {
+  position: relative;
+  cursor: pointer;
+}
+
+header .menuIcon i {
+  position: absolute;
+  top: 0;
+  right: 10%;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-color: white;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+header .menuIcon i::before {
+  position: absolute;
+  top: -6px;
+  right: 10%;
+  content: "";
+  width: 25px;
+  height: 2px;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+  background-color: white;
+}
+
+header .menuIcon i::after {
+  position: absolute;
+  top: 6px;
+  right: 10%;
+  content: "";
+  width: 25px;
+  height: 2px;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+  background-color: whitesmoke;
+}
+
+header .menuOpen i {
+  -webkit-transform: translateX(12px);
+          transform: translateX(12px);
+  background-color: transparent;
+}
+
+header .menuOpen i::before {
+  -webkit-transform: rotate(-30deg) translateX(-12px);
+          transform: rotate(-30deg) translateX(-12px);
+  width: 30px;
+}
+
+header .menuOpen i::after {
+  -webkit-transform: rotate(30deg) translateX(-12px);
+          transform: rotate(30deg) translateX(-12px);
+  width: 30px;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Verdana, sans-serif;
+  background-color: #272727;
+  color: whitesmoke;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.5))), url("../images/home.jpg");
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("../images/home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .socialIcons {
+  font-size: 30px;
+}
+/*# sourceMappingURL=main.css.map */

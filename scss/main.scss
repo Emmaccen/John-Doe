@@ -1,0 +1,27 @@
+@import "config";
+@import "home";
+@import "menu";
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Verdana, sans-serif;
+  background-color: $primaryColor;
+  color: setTextColor($primaryColor);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)),
+    url("../images/home.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+footer {
+  position: fixed;
+  bottom: 1rem;
+  width: 100%;
+  @include flex;
+
+  & .socialIcons {
+    font-size: 30px;
+  }
+}
